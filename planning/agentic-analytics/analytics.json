@@ -1,0 +1,26 @@
+[
+  {
+    "event": "SUBAGENT_STOP",
+    "session_id": "f539150e-0f80-4329-bee8-ed1c90646567",
+    "agent_id": "a8e5cc2203201f824",
+    "agentName": "unknown",
+    "duration": 0,
+    "outputLength": 19,
+    "transcriptPath": "/Users/kunal.rana/.claude/projects/-Users-kunal-rana/f539150e-0f80-4329-bee8-ed1c90646567/subagents/agent-a8e5cc2203201f824.jsonl",
+    "tool": "claude-code",
+    "source": "cli",
+    "timestamp": "2026-09-11T13:55:36.500Z"
+  },
+  {
+    "event": "SUBAGENT_STOP",
+    "session_id": "f539150e-0f80-4329-bee8-ed1c90646567",
+    "agent_id": "a193dbff9f2a2661b",
+    "agentName": "unknown",
+    "duration": 0,
+    "outputLength": 19,
+    "transcriptPath": "/Users/kunal.rana/.claude/projects/-Users-kunal-rana/f539150e-0f80-4329-bee8-ed1c90646567/subagents/agent-a193dbff9f2a2661b.jsonl",
+    "tool": "claude-code",
+    "source": "cli",
+    "timestamp": "2026-09-11T13:56:13.570Z"
+  }
+]
