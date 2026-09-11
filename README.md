@@ -10,24 +10,12 @@ day**, then turns that forecast into **daily order recommendations** and flags
 
 ## Two paths
 
+![Architecture](docs/architecture.svg)
+
 - **Offline (training):** synthetic data → feature engineering → XGBoost with a
   time-based split and walk-forward backtest → saved model + metrics.
 - **Online (serving):** load the model → recursive multi-step forecast → derive
   order + spoilage recommendations → FastAPI serves them.
-
-```
- sales + weather + calendar (Postgres)
-            │  build features (lags, rolling, calendar, weather) — NO leakage
-            ▼
-   XGBoost (Poisson objective)  ──time-based split + walk-forward backtest──▶ metrics
-            │  save model + version (registry)
-            ▼
-   recursive per-item forecast ──▶ recommendations (order qty) + spoilage risk
-            │
-            ▼
-        FastAPI  ( /forecast/{id}, /recommendations, /spoilage-risk )
-   scheduler: daily batch + weekly retrain
-```
 
 ## Components
 
